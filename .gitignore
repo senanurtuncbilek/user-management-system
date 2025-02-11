@@ -1,0 +1,12 @@
+# Veritabanı bağlantı dosyası
+config.js
+
+# Node.js bağımlılıkları (gereksiz dosyalar)
+node_modules/
+
+# Çevresel değişkenler
+.env
+
+# Sistem dosyaları
+.DS_Store
+npm-debug.log

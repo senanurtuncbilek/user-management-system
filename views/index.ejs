@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Kullanıcı Yönetim Sistemi</title>
+</head>
+
+<body>
+    <div id="app">
+        <header class="header">
+            <h1>Kullanıcı Yönetim Paneli</h1>
+            <a href="/users/new" class="createUser">
+                Yeni Kullanıcı Ekle
+            </a>
+        </header>
+
+        <div class="users">
+            <div class="users__names">
+                <span class="users__names--title">
+                      Kullanıcı Listesi
+                  </span>
+                <ul class="users__names--list">
+                    <% users.forEach(user => { %>
+                        <li class="users__names--item">
+                            <a href="/users/<%= user.userid %>"><%= user.name %> - <%= user.email %></a>
+                            <a href="/users/edit/<%= user.userid %>" class="editBtn">Düzenle</a>
+                            <form action="/users/delete/<%= user.userid %>" method="POST">
+                                <button type="submit" class="deleteBtn">Sil</button>
+                            </form>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

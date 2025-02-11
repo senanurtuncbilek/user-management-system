@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+    padding: 0 10px;
+    background-color: #f5f5f5;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.createUser {
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: #28a745;
+    color: white;
+}
+.createUser:hover {
+    background-color: #218838;
+}
+.users__names--list {
+    list-style: none;
+    padding: 0;
+}
+.users__names--item {
+    background: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.editBtn {
+    padding: 5px 10px;
+    background-color: #ffc107;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.deleteBtn {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.deleteBtn:hover {
+    background-color: #c82333;
+}

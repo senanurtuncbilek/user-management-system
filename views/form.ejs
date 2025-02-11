@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Kullanıcı Formu</title>
+</head>
+
+<body>
+    <div class="addUser">
+        <form action="<%= user ? `/users/update/${user.userid}` : '/users' %>" method="POST">
+            <h2><%= user ? "Kullanıcıyı Güncelle" : "Yeni Kullanıcı Ekle" %></h2>
+            <input type="text" name="name" placeholder="Ad" value="<%= user ? user.name : '' %>" required />
+            <input type="email" name="email" placeholder="E-posta" value="<%= user ? user.email : '' %>" required />
+            <input type="password" name="password" placeholder="Şifre" required />
+            <button type="submit"><%= user ? "Güncelle" : "Ekle" %></button>
+        </form>
+    </div>
+</body>
+
+</html>
