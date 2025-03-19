@@ -3,6 +3,20 @@ const router = express.Router();
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 
+
+// Kullanıcı giriş sayfası (Login)
+router.get("/login", async (req, res) => {
+    res.render("login", { errorMessage: null });  // Hata mesajını null olarak gönderiyoruz
+});
+
+
+
+
+
+//******************************************* */
+
+
+
 // **Tüm kullanıcıları listele**
 router.get("/", async (req, res) => {
     try {
@@ -54,7 +68,7 @@ router.post("/", async (req, res) => {
     }
 });
 
-// **Kullanıcı güncelleme (DÜZELTİLDİ)**
+// **Kullanıcı güncelleme**
 router.post("/update/:userid", async (req, res) => {
     const { name, email, password } = req.body;
     try {
